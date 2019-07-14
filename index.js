@@ -70,13 +70,17 @@ app.get('/assets/all', (req, res)=>{
 
 // allocate-task API
 app.post('/allocate-task', (req, res)=>{
-    let worker = req.body.worker;
-    let task = worker.tasks;
-    task.push(req.body.task);
-    db.collection(workers_collection).findOneAndUpdate({"workerId": worker.workerId}, {$set: {tasks: task}}, (err, r)=>{
-        assert.equal(null, err);
-        res.json(r)
-    });
+    let worker = req.body.wid;
+    let t = req.body.tid;
+    let date = req.body.date;
+    db.collection(tasks_collection).find({"taskId": t}).toArray((err, r)=>{
+        r[0].allocated = new Date();
+        r[0].performedBy = date;
+        db.collection(workers_collection).findOneAndUpdate({"workerId": worker.workerId}, {$push: {tasks:r[0]}}, (err, rrr)=>{
+            assert.equal(null, err);
+            res.json(rrr)
+        });
+    })
 })
 
 // get-tasks-for-worker/{workerId}
