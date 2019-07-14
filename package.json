@@ -1,0 +1,19 @@
+{
+  "name": "udaan",
+  "version": "1.0.0",
+  "description": "udaan recruitment task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanaytoshniwal/Udaan.git"
+  },
+  "author": "Tanay Toshniwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanaytoshniwal/Udaan/issues"
+  },
+  "homepage": "https://github.com/tanaytoshniwal/Udaan#readme"
+}
