@@ -1,0 +1,8 @@
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Asset Description:</label>
+    <input type="text" id="desc" class="form-control" placeholder="Enter Description" name="desc" [(ngModel)]="desc" required>
+    <small id="descHelp" class="form-text text-muted">Just add a simple description</small>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="add()">Add New Asset</button>
+</form>

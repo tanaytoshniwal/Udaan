@@ -1,0 +1,24 @@
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title:</label>
+    <input type="text" class="form-control" placeholder="Enter Title" name="title" [(ngModel)]="title" required>
+    <small class="form-text text-muted">Title of the Task</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Asset:</label>
+    <input type="text" class="form-control" placeholder="Enter Asset Id" name="asset" [(ngModel)]="asset" required>
+    <small class="form-text text-muted">Asset on which task is to be performed</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Frequency:</label>
+    
+    <select class="btn btn-secondary" [(ngModel)]="freq">
+        <option class="dropdown-item bg-light">Hourly</option>
+        <option class="dropdown-item bg-light">Daily</option>
+        <option class="dropdown-item bg-light">Weekly</option>
+        <option class="dropdown-item bg-light">Monthly</option>
+        <option class="dropdown-item bg-light">Yearly</option>
+    </select>
+    <small class="form-text text-muted">Asset on which task is to be performed</small>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="add()">Add New Task</button>

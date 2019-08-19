@@ -1,0 +1,8 @@
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Worker Name:</label>
+    <input type="text" id="desc" class="form-control" placeholder="Enter Name" name="name" [(ngModel)]="name" required>
+    <small id="descHelp" class="form-text text-muted">Enter Worker Name</small>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="add()">Add New Worker</button>
+</form>

@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Worker ID:</label>
+    <input type="text" id="desc" class="form-control" placeholder="Enter ID" name="id" [(ngModel)]="id" required>
+    <small id="descHelp" class="form-text text-muted">Enter Worker ID</small>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="get()">Get Worker Tasks</button>
+</form>
+<div class="card" *ngFor="let obj of data; let i = index;">
+  <div class="card-body">
+    <h5 class="card-title">{{obj.title}}</h5>
+    <p class="card-text">Frequency : {{obj.frequency}}</p>
+    <p class="card-text">ID : {{obj.taskId}}</p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Worker ID:</label>
+    <input type="text" id="desc" class="form-control" placeholder="Enter ID" name="wid" [(ngModel)]="wid" required>
+    <small id="descHelp" class="form-text text-muted">Enter Worker ID</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Task ID:</label>
+    <input type="text" id="desc" class="form-control" placeholder="Enter ID" name="tid" [(ngModel)]="tid" required>
+    <small id="descHelp" class="form-text text-muted">Enter Task ID</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Completion Date:</label>
+    <input type="date" name="date" [(ngModel)]="date" required>
+    <small id="descHelp" class="form-text text-muted">Enter Task ID</small>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="assign()">Assign</button>
+</form>

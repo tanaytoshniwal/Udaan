@@ -1,0 +1,7 @@
+<h3>Here are the Assets from Database:</h3>
+<div class="card" *ngFor="let obj of data; let i = index;">
+  <div class="card-body">
+    <h5 class="card-title">{{obj.title}}</h5>
+    <p class="card-text">ID : {{obj.assetId}}</p>
+  </div>
+</div>
